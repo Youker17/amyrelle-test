@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+ 
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+ 
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+ 
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+ 
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+ 
+    --radius: 0.5rem;
+  }
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: 'Dear Jane';
+  src: url(./fonts/Dear\ Jane.ttf);
+}
+
+}
+
+.fp-watermark{
+  display: none;
+}
+
+
+.hero_video-desktop{
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+#fp-nav.fp-right{
+  left: 5px !important;
+  
+}
+
+#fp-nav{
+  position: fixed !important;
+  transform: translate(0%,20%) !important;
+  left: 5px !important;
+  width: fit-content;
+  z-index: 10 ;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+   background-color: white !important;
+}
+
+
+.fp-table{
+  justify-content: end !important;
+}
+
+
+#section6 > .fp-overflow {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
+
+/* Set the width and color of the scrollbar track */
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: #a4a4a4;
+}
+
+/* Set the style and color of the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 0px;
+}
+
+/* On hover, the thumb will have a different color */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
