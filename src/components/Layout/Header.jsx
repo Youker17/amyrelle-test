@@ -94,6 +94,7 @@ export default function Header({
             </div>
           </div>
           <div className="container  flex flex-row justify-center gap-10   ">
+          
             {headerData.map((e, i) => (
               <Link
                 key={i}
