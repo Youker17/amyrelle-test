@@ -1,10 +1,3 @@
-import { DesctopLogo } from "@/assets/Icon";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { twMerge } from "tailwind-merge";
-import MobileHeader from "./MobileHeader";
-import SideCart from "./SideCart";
 
 export default function Header({
   languages,
@@ -12,39 +5,38 @@ export default function Header({
   subHeader,
   urlPrefix,
 }) {
-  const router = useRouter();
-  const { slug } = router.query;
-  const [lang, setLang] = useState("");
-  const [click, setClick] = useState(false);
+  // const router = useRouter();
+  // const { slug } = router.query;
+  // const [lang, setLang] = useState("");
+  // const [click, setClick] = useState(false);
 
-  useEffect(() => {
-    var storedLang = localStorage.getItem("lang");
+  // useEffect(() => {
+  //   var storedLang = localStorage.getItem("lang");
 
-    console.log(storedLang)
+  //   console.log(storedLang)
 
-    if (click) {
-      if (storedLang == "") {
-        router.push("http://localhost:3000/");
-      }
+  //   if (click) {
+  //     if (storedLang == "") {
+  //       router.push("http://localhost:3000/");
+  //     }
 
-      localStorage.setItem("lang", storedLang);
-      router.push("/" + storedLang);
-    }
-    setClick(false);
-    languages.forEach(l => {
-      l.selected = l.url == storedLang;
-  });
-  }, [click]);
+  //     localStorage.setItem("lang", storedLang);
+  //     router.push("/" + storedLang);
+  //   }
+  //   setClick(false);
+  //   languages.forEach(l => {
+  //     l.selected = l.url == storedLang;
+  // });
+  // }, [click]);
 
-  const SelectLang = (url, event) => {
-    localStorage.setItem("lang", url);
-    setLang(url);
-    setClick(true);
-  };
-
+  // const SelectLang = (url, event) => {
+  //   localStorage.setItem("lang", url);
+  //   setLang(url);
+  //   setClick(true);
+  // };
   return (
     <>
-      <div className="fixed w-full top-0 left-0 z-50">
+      {/* <div className="fixed w-full top-0 left-0 z-50">
         <nav className="w-full flex lg:hidden ">
           <MobileHeader />
         </nav>
@@ -90,7 +82,6 @@ export default function Header({
               href={languages.find((l) => l.selected).url + "/"}
               className="font-bold text-3xl cursor-pointer text-[#282828] font-dearjane"
             >
-              {/* Amyrelle */}
               <DesctopLogo />
             </Link>
             <div className="flex flex-row gap-2 font-poppins text-xs text-gray-600">
@@ -119,7 +110,7 @@ export default function Header({
         </nav>
       </div>
 
-      <SideCart />
+      <SideCart /> */}
     </>
   );
 }

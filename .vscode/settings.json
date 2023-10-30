@@ -4,7 +4,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true
-  }
+  },
+  "nuxt.isNuxtApp": false
   // "nuxt.isNuxtApp": false,
   // "[javascriptreact]": {
   //   "editor.defaultFormatter": "vscode.typescript-language-features"
